@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose');
 
+// eslint-disable-next-line no-use-before-define
 const Todo = mongoose.Schema({
   name: { type: String, required: true },
   desc: { type: String, required: true },

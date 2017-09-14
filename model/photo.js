@@ -9,6 +9,7 @@ const tempDir = `${__dirname}/../temp`;
 const s3UploadProm = require('../lib/aws-s3');
 const debug = require('debug')('cfgram:Photo');
 
+// eslint-disable-next-line no-use-before-define
 const Photo = mongoose.Schema({
   name: { type: String, required: true },
   desc: { type: String, required: true },
@@ -20,6 +21,7 @@ const Photo = mongoose.Schema({
 
 
 Photo.statics.upload = function(req) {
+  debug('#Photo upload');
   return new Promise((resolve, reject) => {
     if(!req.file) return reject(new Error('form-data failed; file not present'));
     if(!req.file.filename) return reject(new Error('form-data failed; file path not found'));
