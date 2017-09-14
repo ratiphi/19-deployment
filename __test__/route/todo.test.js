@@ -4,7 +4,7 @@ const faker = require('faker');
 const mocks = require('../lib/mocks');
 const superagent = require('superagent');
 const server = require('../../lib/server');
-const Todo = require('../../model/todo');
+//const Todo = require('../../model/todo');
 require('jest');
 
 describe('Testing Todo Routes', function() {

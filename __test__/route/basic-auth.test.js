@@ -4,7 +4,7 @@ const faker = require('faker');
 const mocks = require('../lib/mocks');
 const superagent = require('superagent');
 const server = require('../../lib/server');
-const User = require('../../model/user');
+//const User = require('../../model/user');
 require('jest');
 
 describe('Testing basic auth routes', function() {
