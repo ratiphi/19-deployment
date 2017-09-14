@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 
+// eslint-disable-next-line no-use-before-define
 const User = mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
@@ -47,7 +48,7 @@ User.methods.generateFindHash = function() {
       this.findHash = crypto.randomBytes(32).toString('hex');
       this.save()
         .then(() => resolve(this.findHash))
-        .catch(err => {
+        .catch(() => {
           if(tries > 3) return reject(new Error('authorization failed; could not validate findHash'));
           tries++;
           _generateFindHash();
