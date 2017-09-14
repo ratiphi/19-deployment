@@ -1,4 +1,4 @@
-# Lab 18 - AWS SDK
+# Lab 19 - Heroku and Travis Deployment
 ## Tim Turner
 =====================================
 
